@@ -3,7 +3,7 @@ resource "aws_instance" "workstation" {
   instance_type = "t2.micro"
   key_name = "workstation2"
   tags = {
-    Name        = "WorkStation"
+    Name        = "prometheus-server"
   }
 }
 
@@ -13,16 +13,6 @@ resource "aws_instance" "server01" {
   key_name = "workstation2"
 
   tags = {
-    Name        = "Server01"
-  }
-}
-
-resource "aws_instance" "server02" {
-  ami = "ami-04a81a99f5ec58529"
-  instance_type = "t2.micro"
-  key_name = "workstation2"
-
-  tags = {
-    Name        = "Server02"
+    Name        = "production-server"
   }
 }
