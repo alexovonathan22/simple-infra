@@ -9,15 +9,17 @@ phases:
  
   install: 
     commands: 
+      - pwd
+      - ls -al
       - "curl -s -qL -o terraform.zip https://releases.hashicorp.com/terraform/${TF_VERSION}/terraform_${TF_VERSION}_linux_amd64.zip" 
       - unzip -o terraform.zip 
  
   build: 
     commands: 
       - "cd ${CODEBUILD_SRC_DIR}/${CODE_SRC_DIR}"
-      - terraform -version
       - pwd
       - ls -al
+      - terraform -version
       - "terraform init"
       - "terraform plan"
       - "terraform apply"
