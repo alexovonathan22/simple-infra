@@ -17,10 +17,11 @@ phases:
       - export CHECKOUT_DIR=/srv/codecommit/ && rm -rf $CHECKOUT_DIR 
       - cp -a /$CODEBUILD_SRC_DIR/. $CHECKOUT_DIR 
       - cd "$CHECKOUT_DIR/"
+      - pwd
       - ls -al
-      - terraform init -no-color
-      - terraform plan -no-color 
-      - terraform apply --auto-approve
+      - "terraform init"
+      - "terraform plan"
+      - "terraform apply"
  
   post_build: 
     commands: 
