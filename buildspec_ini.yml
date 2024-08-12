@@ -17,7 +17,6 @@ phases:
     	- export CHECKOUT_DIR=/srv/codecommit/ && rm -rf $CHECKOUT_DIR 
       - cp -a /$CODEBUILD_SRC_DIR/. $CHECKOUT_DIR 
       - cd "$CHECKOUT_DIR/" 
-      - sed -i -e "s/{{ENV}}/dev/" terraform-prac.tf
       - terraform init -no-color
       - terraform plan -no-color 
       - terraform apply --auto-approve
