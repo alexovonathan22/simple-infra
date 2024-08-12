@@ -1,5 +1,5 @@
 resource "aws_instance" "workstation" {
-  ami = "ami-04a81a99f5ec58529"
+  ami = "ami-0ae8f15ae66fe8cda"
   instance_type = "t2.micro"
   key_name = "workstation2"
   tags = {
@@ -8,7 +8,7 @@ resource "aws_instance" "workstation" {
 }
 
 resource "aws_instance" "server01" {
-  ami = "ami-04a81a99f5ec58529"
+  ami = "ami-0ae8f15ae66fe8cda"
   instance_type = "t2.micro"
   key_name = "workstation2"
 
