@@ -17,6 +17,7 @@ phases:
       - export CHECKOUT_DIR=/srv/codecommit/ && rm -rf $CHECKOUT_DIR 
       - cp -a /$CODEBUILD_SRC_DIR/. $CHECKOUT_DIR 
       - cd "$CHECKOUT_DIR/"
+      - terraform -version
       - pwd
       - ls -al
       - "terraform init"
